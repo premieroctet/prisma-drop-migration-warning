@@ -22,7 +22,7 @@
   "devDependencies": {
     "@octokit/types": "^13.6.1",
     "@types/jest": "^29.5.13",
-    "@types/node": "^22.7.7",
+    "@types/node": "^22.7.9",
     "@typescript-eslint/parser": "^7.18.0",
     "@vercel/ncc": "^0.38.2",
     "babel-jest": "^29.7.0",
