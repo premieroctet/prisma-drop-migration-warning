@@ -47,7 +47,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}  # Check out the current PR
 
       - name: Check Prisma Migrations
-        uses: ./path/to/action  # Adjust the path to your action's directory
+        uses: /premieroctet/prisma-drop-migration-warning@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Set the GitHub token to access API
         with:
