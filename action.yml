@@ -1,0 +1,27 @@
+name: "Check Prisma Migrations"
+description: "Checks for table or column drops in Prisma migration files"
+author: "Quentin Grancher"
+branding:
+  icon: database
+  color: green
+inputs:
+  main-branch:
+    description: "Main branch to compare against"
+    required: true
+    default: "main"
+  path:
+    description: "Path to your Prisma folder (e.g., prisma)"
+    required: true
+    default: "prisma"
+  message:
+    description: "The message to post when a potential drop is detected, will default to a generic message"
+    required: false
+    default: "⚠️ Warning: You are dropping a table or column in this migration."
+  warning:
+    description: "Whether to post a warning comment on the PR if a drop is detected"
+    required: false
+    default: true
+    type: boolean
+runs:
+  using: "node16"
+  main: "dist/index.js"

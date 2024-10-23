@@ -1,0 +1,45 @@
+{
+  "name": "prisma-drop-migration-warning",
+  "author": "quentingrnchr",
+  "license": "ISC",
+  "description": "This action checks if a Prisma Migration in a pull request contains a drop table command and warns the user if it does.",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "type": "module",
+  "keywords": [
+    "actions",
+    "prisma",
+    "migration"
+  ],
+  "scripts": {
+    "test": "npm run build && node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "build": "tsc",
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "eslint . --ext .js,.ts --fix",
+    "package": "ncc build --source-map",
+    "build:package": "npm run build && npm run package"
+  },
+  "devDependencies": {
+    "@octokit/types": "^13.6.1",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.7.7",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vercel/ncc": "^0.38.2",
+    "babel-jest": "^29.7.0",
+    "eslint": "^8.57.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "xo": "^0.59.3"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
+    "@octokit/action": "^7.0.0",
+    "@octokit/core": "^6.1.2",
+    "@octokit/plugin-paginate-rest": "^11.3.5",
+    "@octokit/plugin-rest-endpoint-methods": "^13.2.6",
+    "@octokit/webhooks-types": "^7.6.1"
+  }
+}
