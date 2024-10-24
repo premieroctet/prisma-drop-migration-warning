@@ -7,7 +7,7 @@
 
 ## Features
 
-- Detects any `All the data in the column will be lost.` statements in Prisma migration SQL files on a pull request.
+- Detects any column / table drops statements in Prisma migration SQL files on a pull request.
 - Provides an option to post a warning comment on the pull request if a drop is detected.
 - Allows configuration of the main branch to compare against and the path to the Prisma migrations.
 
