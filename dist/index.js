@@ -54128,7 +54128,7 @@ async function run() {
     }
     catch (error) {
         if (error instanceof Error) {
-            _actions_core__WEBPACK_IMPORTED_MODULE_0__.setFailed(error.message);
+            _actions_core__WEBPACK_IMPORTED_MODULE_0__.setOutput('Error executing the action', error.message);
         }
     }
 }

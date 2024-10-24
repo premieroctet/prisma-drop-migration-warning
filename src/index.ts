@@ -53,7 +53,7 @@ async function run(): Promise<void> {
     core.setOutput('migration_files', migrationFiles);
   } catch (error) {
     if (error instanceof Error) {
-      core.setFailed(error.message);
+      core.setOutput('Error executing the action', error.message);
     }
   }
 }
