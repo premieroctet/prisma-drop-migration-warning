@@ -10,7 +10,6 @@ import {
 // Main action function
 async function run(): Promise<void> {
   try {
-    throw new Error('Test error');
     // Initialize Octokit for GitHub API
     const octokit = getOctokitClient();
 
@@ -41,7 +40,7 @@ async function run(): Promise<void> {
         'A table or column drop has been detected in the Prisma migration.'
       );
 
-      if (warning) {
+      if (Boolean(warning)) {
         await warnWithCommentOnPR(octokit, message);
       }
     } else {

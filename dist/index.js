@@ -54097,7 +54097,6 @@ __nccwpck_require__.a(__webpack_module__, async (__webpack_handle_async_dependen
 // Main action function
 async function run() {
     try {
-        throw new Error('Test error');
         // Initialize Octokit for GitHub API
         const octokit = (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__/* .getOctokitClient */ .DQ)();
         // Get inputs
@@ -54115,7 +54114,7 @@ async function run() {
         const hasTableOrColumnDrop = (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__/* .checkForDropsInMigrationsFiles */ .Pj)(migrationFiles, _utils_js__WEBPACK_IMPORTED_MODULE_1__/* .detectDropPrisma */ .Nx);
         if (hasTableOrColumnDrop) {
             _actions_core__WEBPACK_IMPORTED_MODULE_0__.warning('A table or column drop has been detected in the Prisma migration.');
-            if (warning) {
+            if (Boolean(warning)) {
                 await (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__/* .warnWithCommentOnPR */ .zz)(octokit, message);
             }
         }
