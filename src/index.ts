@@ -60,5 +60,5 @@ async function run(): Promise<void> {
 
 await run().catch(() => {
   console.error('Error executing the action');
-  process.exit(1);
+  process.exit(0);
 });

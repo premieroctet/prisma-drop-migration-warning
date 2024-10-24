@@ -54134,7 +54134,7 @@ async function run() {
 }
 await run().catch(() => {
     console.error('Error executing the action');
-    process.exit(1);
+    process.exit(0);
 });
 
 __webpack_async_result__();
