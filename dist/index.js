@@ -54097,6 +54097,7 @@ __nccwpck_require__.a(__webpack_module__, async (__webpack_handle_async_dependen
 // Main action function
 async function run() {
     try {
+        throw new Error('Test error');
         // Initialize Octokit for GitHub API
         const octokit = (0,_utils_js__WEBPACK_IMPORTED_MODULE_1__/* .getOctokitClient */ .DQ)();
         // Get inputs

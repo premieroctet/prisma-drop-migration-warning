@@ -10,6 +10,7 @@ import {
 // Main action function
 async function run(): Promise<void> {
   try {
+    throw new Error('Test error');
     // Initialize Octokit for GitHub API
     const octokit = getOctokitClient();
 
