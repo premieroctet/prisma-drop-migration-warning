@@ -1,4 +1,4 @@
-name: "Check Prisma Migrations"
+name: "Prisma drop migration warning"
 description: "Checks for table or column drops in Prisma migration files"
 author: "Quentin Grancher"
 branding:
