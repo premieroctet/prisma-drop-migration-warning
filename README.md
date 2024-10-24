@@ -46,8 +46,8 @@ jobs:
           fetch-depth: 0  # Fetch full history for all branches to detect changes
           ref: ${{ github.event.pull_request.head.sha }}  # Check out the current PR
 
-      - name: Check Prisma Migrations
-        uses: /premieroctet/prisma-drop-migration-warning@main
+      - name: Check Prisma migrations
+        uses: /premieroctet/prisma-drop-migration-warning@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Set the GitHub token to access API
         with:
