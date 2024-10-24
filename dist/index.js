@@ -57772,7 +57772,7 @@ function getPREventData() {
  * @returns {boolean} true if the file contains a drop table or column statement, false otherwise
  */
 function detectDropPrisma(fileContent) {
-    const dropRegex = /drop .*? (table|column) `([^`]+)` on the `([^`]+)` table\. All the data in the column will be lost/i;
+    const dropRegex = /drop .*?(column `([^`]+)` on the `([^`]+)` table|`([^`]+)` table)/i;
     return dropRegex.test(fileContent);
 }
 function getOctokitClient() {

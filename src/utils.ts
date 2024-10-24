@@ -27,7 +27,7 @@ export function getPREventData(): PullRequestEvent {
  */
 export function detectDropPrisma(fileContent: string): boolean {
   const dropRegex =
-    /drop .*? (table|column) `([^`]+)` on the `([^`]+)` table\. All the data in the column will be lost/i;
+    /drop .*?(column `([^`]+)` on the `([^`]+)` table|`([^`]+)` table)/i;
   return dropRegex.test(fileContent);
 }
 
