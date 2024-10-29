@@ -3,7 +3,7 @@
   "author": "quentingrnchr",
   "license": "ISC",
   "description": "This action checks if a Prisma Migration in a pull request contains a drop table command and warns the user if it does.",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "lib/index.js",
   "type": "module",
   "keywords": [
